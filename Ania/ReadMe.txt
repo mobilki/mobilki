@@ -1,0 +1,1 @@
+Pierwszy wrzut na git
