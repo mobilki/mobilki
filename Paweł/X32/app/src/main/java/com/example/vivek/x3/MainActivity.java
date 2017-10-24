@@ -6,17 +6,24 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
+public class MainActivity extends AppCompatActivity {
+    @Bind(R.id.textView) TextView t1;
+    @Bind(R.id.editText) TextView e1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
+
     public void onButtonClick(View v){
-        EditText e1 = (EditText)findViewById(R.id.editText);
-        TextView t1 = (TextView)findViewById(R.id.textView);
+
+        ButterKnife.bind(this);
+        ButterKnife.bind(this);
+
         int num1 = Integer.parseInt(e1.getText().toString());
         String napis="";
         if (num1 > 0)
